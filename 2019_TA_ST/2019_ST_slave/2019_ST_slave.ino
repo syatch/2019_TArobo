@@ -5,7 +5,7 @@
 //下の3つの値を変えるだけで問題ない...はず
 uint8_t slave_address = 0x33;
 float degree_per_step = 0.1;//ステッピングモータの1ステップあたりの角度単位は°
-int rotate_speed = 100;//ステッピングモータの回転スピード　単位はRPM
+int rotate_speed = 45;//ステッピングモータの回転スピード　単位はRPM
 
 
 KinjoStMotorSlave slave = KinjoStMotorSlave(slave_address, degree_per_step, rotate_speed);
