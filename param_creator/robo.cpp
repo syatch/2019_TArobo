@@ -131,7 +131,7 @@ int go_around (data &data)
     data.left_length = circle_radius * (add_degree + step_degree - M_PI);
     data.direction = !data.direction;
     data.start_theta = theta;
-    data.end_theta = M_PI * data.direction + correct_degree / 180 * M_PI;
+    data.end_theta = -M_PI * data.direction + correct_degree / 180 * M_PI;
     return circle_radius * (add_degree + step_degree - M_PI);
 }
 
@@ -148,6 +148,15 @@ int main ()
     data.end_theta = -M_PI + correct_degree / 180 * M_PI;
 
     // one loop set
+    go_straight(data);
+    go_around(data);
+    go_straight(data);
+    go_around(data);
+
+    go_straight(data);
+    go_around(data);
+    go_straight(data);
+    go_around(data);
     go_straight(data);
     go_around(data);
     go_straight(data);
